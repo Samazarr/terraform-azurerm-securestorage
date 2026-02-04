@@ -1,6 +1,8 @@
 pipeline {
   agent any
-
+  triggers {
+        githubPush()
+    }
   stages {
     stage('test_connexion_github') {
       steps {
